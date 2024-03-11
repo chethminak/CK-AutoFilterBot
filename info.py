@@ -17,27 +17,27 @@ def is_valid_ip(ip):
     return re.match(ip_pattern, ip) is not None
 
 # Bot information
-API_ID = environ.get('API_ID', '27996421')
+API_ID = environ.get('API_ID', '')
 if len(API_ID) == 0:
     print('Error - API_ID is missing, exiting now')
     exit()
 else:
     API_ID = int(API_ID)
-API_HASH = environ.get('API_HASH', '5f5cb6a13ecff3d90e1ec73dc366e26d')
+API_HASH = environ.get('API_HASH', '')
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '6705659726:AAHZR_sjsFRvlLCoN6aH8W6uD5PMmxuq4-s')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
 PORT = int(environ.get('PORT', '80'))
 
 # Bot pics
-PICS = (environ.get('PICS', 'https://te.legra.ph/file/a0aa65161ec712e9302c2.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/a665e9bdac17c9157b2ad.jpg')).split()
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '6887525311 1315497648')
+ADMINS = environ.get('ADMINS', '')
 if len(ADMINS) == 0:
     print('Error - ADMINS is missing, exiting now')
     exit()
@@ -45,13 +45,13 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002115847047').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1001624640902').split()]
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1002127056975').split()]
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002096413289')
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
@@ -60,7 +60,7 @@ else:
 IS_FSUB = is_enabled('IS_FSUB', True)
 
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '-1002096413289')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -73,30 +73,30 @@ if len(OPENAI_API) == 0:
     print('Info - OPENAI_API is empty')
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://linksearch72:tcTnUrmSQNU0kwlL@cluster0.lysnymj.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URL = environ.get('DATABASE_URL', "")
 if len(DATABASE_URL) == 0:
     print('Error - DATABASE_URL is missing, exiting now')
     exit()
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'linksearch72')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/+RBehEdoijsNhNTdl')
-OWNER_USERNAME = environ.get("OWNER_USERNAME", "Rohankarnje")
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/pikashowoffical1')
-FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/+RBehEdoijsNhNTdl')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/+RBehEdoijsNhNTdl")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/howmaksvc")
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/CK4U2_CHAT')
+OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/KING_WMP")
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/CK4U2')
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/CK_Movie_World')
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/CK4U2")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/CK4U2")
 
 # Bot settings
-DELETE_TIME = int(environ.get('DELETE_TIME', 2400)) # Add time in seconds
+DELETE_TIME = int(environ.get('DELETE_TIME', 3600)) # Add time in seconds
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 MAX_BTN = int(environ.get('MAX_BTN', 10))
 LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'english hindi telugu tamil kannada malayalam').split()]
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "urlshortx.com")
-SHORTLINK_API = environ.get("SHORTLINK_API", "120f1a65085ed7d87f0ee61222115e0af817528e")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "mdiskshortner.link")
+SHORTLINK_API = environ.get("SHORTLINK_API", "36f1ae74ba1aa01e5bd73bdd0bc22aa915443501")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
@@ -107,23 +107,23 @@ AUTO_DELETE = is_enabled('AUTO_DELETE', False)
 WELCOME = is_enabled('WELCOME', False)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
 LONG_IMDB_DESCRIPTION = is_enabled("LONG_IMDB_DESCRIPTION", False)
-LINK_MODE = is_enabled("LINK_MODE", True)
+LINK_MODE = is_enabled("LINK_MODE", False)
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
 IMDB = is_enabled('IMDB', True)
 SPELL_CHECK = is_enabled("SPELL_CHECK", True)
 SHORTLINK = is_enabled('SHORTLINK', False)
 
-PAYMENT_QR = environ.get('PAYMENT_QR', 'http://graph.org/file/cacbbea472e5a48ce0d64.jpg')
+PAYMENT_QR = environ.get('PAYMENT_QR', 'https://telegra.ph/file/a665e9bdac17c9157b2ad.jpg')
 
 # for stream
 IS_STREAM = is_enabled('IS_STREAM', True)
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002096413289")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "https://outflix-jip9.onrender.com")
+URL = environ.get("URL", "")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
